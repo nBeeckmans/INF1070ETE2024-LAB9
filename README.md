@@ -81,3 +81,24 @@ sudo docker run -it ubuntu /bin/bash
 
 `man docker-run` : manuel de docker avec l'option run
 
+`-i` : interactif ! 
+`-t` : avec un terminal
+`ubuntu` : indique l'image a utiliser 
+`/bin/bash` : programme a executer 
+
+`docker ps` : comme ps permet de lister les conteneurs 
+`-a` : indique qu'on veut afficher TOUS les conteneurs (même ceux éteints)
+
+Suivre les commandes pour `start` et `attach`. 
+
+`vim` : on se rend compte que les dockers sont indépendants. il faut réinstaller `vim`.  
+
+
+## Apres installation de curl, apache2 : 
+
+`apache2` : serveur web (donc sur le port 80) 
+
+`localhost:80` : devrait retourner une page d'erreur 
+(car nous n'avons pas connecté le port du conteneur sur le port de notre machine)
+
+
