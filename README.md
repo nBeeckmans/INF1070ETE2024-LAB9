@@ -94,6 +94,19 @@ Suivre les commandes pour `start` et `attach`.
 `vim` : on se rend compte que les dockers sont indépendants. il faut réinstaller `vim`.  
 
 
+## Installation de apache2 : 
+
+`service apache2 restart` : après l'installation de apache2 ! 
+
+On peut verifier avec `curl localhost:80` devrait retourner du HTML : 
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+...
+</html>
+```
+
 ## Apres installation de curl, apache2 : 
 
 `apache2` : serveur web (donc sur le port 80) 
