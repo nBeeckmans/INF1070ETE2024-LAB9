@@ -115,3 +115,34 @@ On peut verifier avec `curl localhost:80` devrait retourner du HTML :
 (car nous n'avons pas connecté le port du conteneur sur le port de notre machine)
 
 
+# DockerFile 
+
+``` 
+FROM ubuntu
+
+RUN apt-get -y update
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get install -y vim curl apache2
+COPY vim/.vimrc /root
+WORKDIR /var/www/html
+```
+
+Avec une image ubuntu, nous lançons `apt-get update`. On indique qu'on est en non-interactif. On install vim, curl, apache2. On copie le fichier `.vimrc` dans `/root`.
+Le dossier dans lequel on va travailler est `/var/www/html`.
+
+
+Avec : 
+
+```
+.
+└── Dockerfile
+    ├── Dockerfile
+    └── vim
+```
+Lancez `sudo docker build ./Dockerfile/` !
+
+On peut lancer `sudo docker run -it ad7307612714 /usr/bin/vim` :D 
+
+NOTE : Le nom du docker est donné dans la commande précédante !
+
+Lancez le service avec `service apache2 start`. 
