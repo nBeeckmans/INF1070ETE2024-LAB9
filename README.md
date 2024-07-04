@@ -119,7 +119,12 @@ On peut verifier avec `curl localhost:80` devrait retourner du HTML :
 
 ` sudo docker create -it --mount type=bind,src="$(pwd)/vim",target="/root" --publish 8080:80 ubuntu /bin/bash ` 
 
-TODO : à completer. 
+`create` marche comme `run` ainsi, on lui ajoute `-it ubuntu /bin/bash` comme c'était pour `run`. 
+
+`--publish 8888:80` permet de connecter le port 8888 de la VM (notre ordinateur) au port 80 du conteneur.
+
+`--mount type=bind,src="$(pwd)/vim",target="/root"` permet de connect le dossier `vim` de notre VM au dossier `root` du conteneur. 
+`type=bind` indique que le mode de connection est un attachement.
 
 # DockerFile 
 
