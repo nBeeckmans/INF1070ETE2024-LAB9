@@ -115,6 +115,12 @@ On peut verifier avec `curl localhost:80` devrait retourner du HTML :
 (car nous n'avons pas connecté le port du conteneur sur le port de notre machine)
 
 
+## Bind et Publish : 
+
+` sudo docker create -it --mount type=bind,src="$(pwd)/vim",target="/root" --publish 8080:80 ubuntu /bin/bash ` 
+
+TODO : à completer. 
+
 # DockerFile 
 
 ``` 
